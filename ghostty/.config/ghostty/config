@@ -1,0 +1,5 @@
+theme = OneHalfDark
+window-padding-x = 6
+
+# cursor-style = underline
+# shell-integration-features = no-cursor
