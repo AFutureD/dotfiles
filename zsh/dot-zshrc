@@ -8,9 +8,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH=$HOME/.local/bin:$PATH
 export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+
+export HOMEBREW_NO_AUTO_UPDATE=true
 
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' continuous-trigger '/'
@@ -38,3 +42,11 @@ alias ir="iredis --rainbow --newbie --decode=utf8"
 alias lz="lazygit"
 
 eval "$(starship init zsh)"
+
+eval "$(mise activate zsh)"
+
+setAppL(){
+    APPPATH=$1
+    APPID=$(mdls -name kMDItemCFBundleIdentifier $APPPATH | cut -d'"' -f2)
+    defaults write $APPID AppleLanguages '(zh-CN)'
+}

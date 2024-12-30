@@ -23,22 +23,6 @@ customCommands:
       - type: 'confirm'
         title: 'Reset Branch To Commit'
         body: 'Are you sure you want to reset Branch({{.SelectedLocalBranch.Name}}) to Commit({{.SelectedSubCommit.Sha}})?'
-  # - key: b
-  #   command: tig blame -- {{.SelectedFile.Name}}
-  #   context: files
-  #   description: blame file at tree
-  #   subprocess: yes
-  # - key: b
-  #   command: tig blame {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
-  #   context: commitFiles
-  #   description: blame file at revision
-  #   subprocess: yes
-  # - key: B
-  #   command: tig blame -- {{.SelectedCommitFile.Name}}
-  #   context: commitFiles
-  #   description: blame file at tree
-  #   subprocess: yes
-
   - key: h
     command: fork log -- {{.SelectedCommitFile.Name}} # tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
     context: commitFiles

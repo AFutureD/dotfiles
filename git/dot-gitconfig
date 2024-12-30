@@ -1,8 +1,8 @@
 [url "ssh://donghuanan@inston.ltd@source.developers.google.com:2022/"]
 	insteadOf = https://source.developers.google.com
 [user]
-	name = Huanan
-	email = donghuanan@inston.ltd
+	email = afuture.d@outlook.com
+	name = AFuture
 [diff]
     external = difft --color=always
 [pager]
@@ -12,4 +12,6 @@
 	ls = log --graph --color=always --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=relative
 	ll = log --graph --stat --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	diffzf = "!f() { git diff --name-only \"$@\"  | fzf --preview=\"git diff 1.1.3.1 HEAD -- {}\"; }; f"
+	file-history = "!f() { git ls --date=short -- $1 | fzf --preview 'git show --ext-diff --color=always {2} -- '$1'' --preview-window='up:70%' ; }; f "
+	fh = file-history
 	
