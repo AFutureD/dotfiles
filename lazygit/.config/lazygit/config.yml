@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  sidePanelWidth: 0.25
+  language: en
+git:
+  branchLogCmd: git ls {{branchName}} --
+  paging:
+    colorArg: always
+    externalDiffCommand: 'difft --color=always --display="$([ $(tput cols) -lt 180 ] && echo inline || echo side-by-side-show-both)" --context=4'
+  log:
+    showWholeGraph: true
+
+keybinding:
+  universal:
+    filteringMenu: 'F'
+customCommands:
+  - key: 'R'
+    context: 'subCommits'
+    command: 'git reset --mixed "{{.SelectedSubCommit.Sha}}"'
+    description: 'Reset Branch To Commit'
+    prompts:
+      - type: 'confirm'
+        title: 'Reset Branch To Commit'
+        body: 'Are you sure you want to reset Branch({{.SelectedLocalBranch.Name}}) to Commit({{.SelectedSubCommit.Sha}})?'
+  # - key: b
+  #   command: tig blame -- {{.SelectedFile.Name}}
+  #   context: files
+  #   description: blame file at tree
+  #   subprocess: yes
+  # - key: b
+  #   command: tig blame {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+  #   context: commitFiles
+  #   description: blame file at revision
+  #   subprocess: yes
+  # - key: B
+  #   command: tig blame -- {{.SelectedCommitFile.Name}}
+  #   context: commitFiles
+  #   description: blame file at tree
+  #   subprocess: yes
+
+  - key: h
+    command: fork log -- {{.SelectedCommitFile.Name}} # tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: 'Show file history'
+    subprocess: true
+  - key: h 
+    command: fork log -- {{.SelectedFile.Name}} # tig -- {{.SelectedFile.Name}}
+    context: files
+    description: 'Show file history'
+    subprocess: true
