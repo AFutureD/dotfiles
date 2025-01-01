@@ -1,0 +1,92 @@
+{
+  description = "Example nix-darwin system flake";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+  };
+
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
+  let
+    configuration = { pkgs, ... }: {
+      
+      nix.channel.enable = false;
+
+      users.users."huanan" = {
+				name = "huanan";
+				home = "/Users/huanan";
+			};
+
+      environment.systemPackages = [ 
+        pkgs.vim
+        pkgs.vscode	
+        pkgs.ghostty
+        pkgs.zplug
+        pkgs.fzf
+        pkgs.eza
+        pkgs.lazygit
+      ];
+
+      nix.settings.experimental-features = "nix-command flakes";
+
+      system.configurationRevision = self.rev or self.dirtyRev or null;
+      system.stateVersion = 5;
+
+      programs.zsh = {
+        enable = true;
+      };
+
+      fonts.packages = [
+        pkgs.fira-code
+        pkgs.nerd-fonts.jetbrains-mono
+      ];
+
+
+      homebrew = {
+        enable = true;
+        onActivation.autoUpdate = true;
+        onActivation.cleanup = "zap";
+        
+        brews = [
+        ];
+        casks = [
+          "raycast"
+          "xcodes"
+          "karabiner-elements"
+          "openinterminal"
+
+          "font-smiley-sans"
+          "font-cascadia-code-pl"
+          "font-caskaydia-cove-nerd-font"
+        ];
+      };
+
+      nixpkgs.config.allowUnfree = true;
+      nixpkgs.hostPlatform = "aarch64-darwin";
+    };
+  in
+  {
+    darwinConfigurations."Huanans-Virtual-Machine" = nix-darwin.lib.darwinSystem {
+      modules = [ 
+        configuration
+        nix-homebrew.darwinModules.nix-homebrew {
+          nix-homebrew = {
+            enable = true;
+            user = "huanan";
+            autoMigrate = true;
+          };
+        }
+        home-manager.darwinModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users."huanan" = import ./home.nix;
+        }
+      ];
+    };
+  };
+}
