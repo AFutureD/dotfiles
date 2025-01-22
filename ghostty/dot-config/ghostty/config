@@ -1,5 +1,12 @@
 theme = OneHalfDark
+
+# window-theme = light
 window-padding-x = 6
+
+adjust-cursor-thickness = 400%
+adjust-cursor-height = -20%
+
+cursor-color = #3478F6
 
 # cursor-style = underline
 # shell-integration-features = no-cursor
