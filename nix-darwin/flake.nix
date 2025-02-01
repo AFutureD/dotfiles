@@ -35,6 +35,31 @@
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 5;
 
+      # https://daiderd.com/nix-darwin/manual/index.html
+      system.defaults.NSGlobalDomain = {
+        InitialKeyRepeat = 25;
+        KeyRepeat = 2;
+      };
+
+      system.defaults.CustomUserPreferences = {
+        "com.apple.Safari" = {
+          SearchProviderShortName = "Google";
+          IncludeDevelopMenu = true;
+          WebKitDeveloperExtrasEnabledPreferenceKey = true;
+        };
+
+        "com.apple.symbolichotkeys" = {
+          AppleSymbolicHotKeys = {
+            "60" = {
+              enabled = false;
+            };
+            "61" = {
+              enabled = false;
+            };
+          };
+        };
+      };
+
       programs.zsh = {
         enable = true;
       };
