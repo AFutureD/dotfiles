@@ -20,13 +20,15 @@
 
     localVariables = {
       XDG_CONFIG_HOME = "$HOME/.config";
+      HOMEBREW_NO_AUTO_UPDATE = "true";
     };
 
     shellAliases = {
-      ls = "eza";
+      ls = "eza -bhl --time-style=relative --git --group-directories-first --octal-permissions --no-user";
       lst = "ls -T -L 2";
-      ll = "ls -abhlG --time-style=relative --git --group-directories-first --octal-permissions --no-user";
+      ll = "eza -abhl --time-style=relative --git --group-directories-first --octal-permissions --no-user";
       lz = "lazygit";
+      ir = "iredis --rainbow --newbie --decode=utf8";
     };
 
     zplug = {
