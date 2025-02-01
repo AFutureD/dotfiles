@@ -22,13 +22,12 @@
 			};
 
       environment.systemPackages = [ 
-        pkgs.vim
-        pkgs.vscode	
-        pkgs.ghostty
+        pkgs.vim	
         pkgs.zplug
         pkgs.fzf
         pkgs.eza
         pkgs.lazygit
+        pkgs.stow
       ];
 
       nix.settings.experimental-features = "nix-command flakes";
@@ -45,24 +44,39 @@
         pkgs.nerd-fonts.jetbrains-mono
       ];
 
-
       homebrew = {
         enable = true;
         onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
         onActivation.cleanup = "zap";
         
         brews = [
+          "mas"
         ];
         casks = [
+          "tailscale"
+		      "visual-studio-code"
+		      "ghostty"
           "raycast"
           "xcodes"
           "karabiner-elements"
           "openinterminal"
+          "jordanbaird-ice"
+          "alt-tab"
+          "fork"
+          "lookin"
+          "zed"
 
           "font-smiley-sans"
           "font-cascadia-code-pl"
           "font-caskaydia-cove-nerd-font"
         ];
+        masApps = {
+          "Yoink" = 457622435;
+          "Bob" = 1630034110;
+          "Xnip" = 1221250572;
+          "PasteNow" = 1552536109;
+        };
       };
 
       nixpkgs.config.allowUnfree = true;
