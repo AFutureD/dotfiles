@@ -36,6 +36,8 @@
       system.stateVersion = 5;
 
       # https://daiderd.com/nix-darwin/manual/index.html
+      system.defaults.dock.show-recents = false;
+      
       system.defaults.NSGlobalDomain = {
         InitialKeyRepeat = 25;
         KeyRepeat = 2;
