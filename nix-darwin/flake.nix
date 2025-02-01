@@ -79,6 +79,7 @@
         
         brews = [
           "mas"
+          "difftastic"
         ];
         casks = [
           "tailscale"

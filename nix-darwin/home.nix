@@ -1,3 +1,5 @@
+# https://nix-community.github.io/home-manager/options.xhtml
+
 { config, pkgs, ... }:
 
 {
@@ -10,6 +12,8 @@
     pkgs.starship
   ];
 
+  xdg.enable = true;
+
   programs.zsh = {
     enable = true;
 
@@ -19,7 +23,6 @@
     '';
 
     localVariables = {
-      XDG_CONFIG_HOME = "$HOME/.config";
       HOMEBREW_NO_AUTO_UPDATE = "true";
     };
 
