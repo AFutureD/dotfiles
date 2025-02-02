@@ -28,6 +28,7 @@
         pkgs.eza
         pkgs.lazygit
         pkgs.stow
+        pkgs.mise
       ];
 
       nix.settings.experimental-features = "nix-command flakes";
