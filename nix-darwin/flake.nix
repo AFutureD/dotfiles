@@ -81,6 +81,7 @@
         brews = [
           "mas"
           "difftastic"
+          "ruby-build" # https://github.com/rbenv/ruby-build/wiki#macos
         ];
         casks = [
           "tailscale"

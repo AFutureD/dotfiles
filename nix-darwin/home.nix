@@ -14,6 +14,11 @@
 
   xdg.enable = true;
 
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
 
