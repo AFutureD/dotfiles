@@ -77,9 +77,10 @@
         enable = true;
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
-        onActivation.cleanup = "zap";
+        # onActivation.cleanup = "zap";
         
         brews = [
+          "gh"
           "mas"
           "difftastic"
           "ruby-build" # https://github.com/rbenv/ruby-build/wiki#macos
