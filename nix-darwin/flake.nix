@@ -46,6 +46,7 @@
         KeyRepeat = 2;
       };
 
+      # ~/Library/Preferences
       system.defaults.CustomUserPreferences = {
         "com.apple.Safari" = {
           SearchProviderShortName = "Google";
