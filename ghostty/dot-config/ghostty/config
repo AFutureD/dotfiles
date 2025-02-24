@@ -10,3 +10,5 @@ cursor-color = #3478F6
 
 # cursor-style = underline
 # shell-integration-features = no-cursor
+
+macos-option-as-alt = true
