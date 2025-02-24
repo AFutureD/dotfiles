@@ -30,6 +30,7 @@
         pkgs.stow
         pkgs.mise
         pkgs.zoxide
+        pkgs.zellij
       ];
 
       nix.settings.experimental-features = "nix-command flakes";
