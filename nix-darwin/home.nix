@@ -35,8 +35,10 @@
     '';
 
     localVariables = {
-      HOMEBREW_NO_AUTO_UPDATE = "true";
-      ZELLIJ_AUTO_ATTACH = "true";
+      HOMEBREW_NO_AUTO_UPDATE = true;
+      ZELLIJ_AUTO_ATTACH = true;
+      HOMEBREW_NO_AUTO_UPDAT = true;
+      HOMEBREW_BUNDLE_NO_UPGRADE = true;
     };
 
     shellAliases = {

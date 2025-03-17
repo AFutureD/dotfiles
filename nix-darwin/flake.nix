@@ -104,6 +104,7 @@
           "font-smiley-sans"
           "font-cascadia-code-pl"
           "font-caskaydia-cove-nerd-font"
+          "font-maple-mono-nf-cn"
         ];
         masApps = {
           "Yoink" = 457622435;
