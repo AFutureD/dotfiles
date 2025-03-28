@@ -13,16 +13,19 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
-      
       nix.channel.enable = false;
+      nix.settings.experimental-features = "nix-command flakes";
+
+      nixpkgs.config.allowUnfree = true;
+      nixpkgs.hostPlatform = "aarch64-darwin";
 
       users.users."huanan" = {
-				name = "huanan";
-				home = "/Users/huanan";
-			};
+    		name = "huanan";
+    		home = "/Users/huanan";
+    	};
 
-      environment.systemPackages = [ 
-        pkgs.vim	
+      environment.systemPackages = [
+        pkgs.vim
         pkgs.zplug
         pkgs.fzf
         pkgs.eza
@@ -33,14 +36,12 @@
         pkgs.zellij
       ];
 
-      nix.settings.experimental-features = "nix-command flakes";
-
+      # https://daiderd.com/nix-darwin/manual/index.html
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 5;
 
-      # https://daiderd.com/nix-darwin/manual/index.html
       system.defaults.dock.show-recents = false;
-      
+
       system.defaults.NSGlobalDomain = {
         InitialKeyRepeat = 25;
         KeyRepeat = 2;
@@ -70,17 +71,19 @@
         enable = true;
       };
 
+      # fonts
       fonts.packages = [
         pkgs.fira-code
         pkgs.nerd-fonts.jetbrains-mono
       ];
 
+      # brew
       homebrew = {
         enable = true;
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
         onActivation.cleanup = "zap";
-        
+
         brews = [
           "gh"
           "mas"
@@ -114,32 +117,11 @@
           "Elpass" = 1484823238;
         };
       };
-
-      nixpkgs.config.allowUnfree = true;
-      nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in
   {
-    darwinConfigurations."Huanans-Virtual-Machine" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-        configuration
-        nix-homebrew.darwinModules.nix-homebrew {
-          nix-homebrew = {
-            enable = true;
-            user = "huanan";
-            autoMigrate = true;
-          };
-        }
-        home-manager.darwinModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.users."huanan" = import ./home.nix;
-        }
-      ];
-    };
     darwinConfigurations."Huanans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-      modules = [ 
+      modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
