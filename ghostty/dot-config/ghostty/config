@@ -12,3 +12,6 @@ cursor-color = #3478F6
 # shell-integration-features = no-cursor
 
 macos-option-as-alt = true
+
+font-family = "Maple Mono NF CN"
+font-feature = +ss01
