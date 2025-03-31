@@ -32,6 +32,8 @@
 
       zstyle ':completion:*:descriptions' format '[%d]'
       zstyle ':fzf-tab:*' continuous-trigger '/'
+
+      export TERM=xterm-256color
     '';
 
     localVariables = {
