@@ -7,23 +7,22 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "icon_theme": "Catppuccin Frappé",
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest",
+      "provider": "zed.dev"
     },
     "version": "2"
   },
-  "telemetry": {
-    "metrics": true
+  "auto_install_extensions": {
+    "catppuccin-icons": true,
+    "nix": true,
+    "swift": true
   },
-  "theme": "Catppuccin Frappé",
+  "autosave": "on_focus_change",
   "buffer_font_family": "Cascadia Code PL",
   "buffer_font_size": 15,
+  "buffer_line_height": "standard",
   "diagnostics": {
     "inline": {
       "enabled": true
@@ -31,29 +30,46 @@
     "update_with_cursor": true,
     "use_rendered": true
   },
-  "languages": {
-    "Swift": {
-      "preferred_line_length": 160,
-      "formatter": null
-    }
-  },
   "edit_predictions": {
     "mode": "subtle"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "icon_theme": {
+    "dark": "Catppuccin Frappé",
+    "light": "Catppuccin Latte"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "language_models": {
+    "google": {
+      "available_models": [
+        {
+          "display_name": "Gemini 2.5 Pro",
+          "max_tokens": 1000000,
+          "name": "gemini-2.5-pro-exp-03-25"
+        }
+      ]
+    }
+  },
+  "preferred_line_length": 160,
+  "soft_wrap": "preferred_line_length",
+  "tabs": {
+    "close_position": "left",
+    "git_status": true
+  },
+  "telemetry": {
+    "metrics": true
   },
   "terminal": {
     "font_family": "Maple Mono NF CN",
     "line_height": "standard"
   },
-  "ui_font_family": "Cascadia Code PL",
-  "language_models": {
-    "google": {
-      "available_models": [
-        {
-          "name": "gemini-2.5-pro-exp-03-25",
-          "display_name": "Gemini 2.5 Pro",
-          "max_tokens": 1000000
-        }
-      ]
-    }
-  }
+  "theme": {
+    "dark": "Catppuccin Frappé",
+    "light": "Ayu Light"
+  },
+  "ui_font_family": "Cascadia Code PL"
 }
