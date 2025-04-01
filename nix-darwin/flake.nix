@@ -48,6 +48,7 @@
       };
 
       # ~/Library/Preferences
+      # https://github.com/yannbertrand/macos-defaults
       system.defaults.CustomUserPreferences = {
         "com.apple.Safari" = {
           SearchProviderShortName = "Google";
