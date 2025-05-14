@@ -39,6 +39,7 @@
     localVariables = {
       HOMEBREW_NO_AUTO_UPDATE = true;
       ZELLIJ_AUTO_ATTACH = true;
+      ZELLIJ_AUTO_EXIT = true;
       HOMEBREW_NO_AUTO_UPDAT = true;
       HOMEBREW_BUNDLE_NO_UPGRADE = true;
     };
@@ -72,5 +73,6 @@
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;
+    attachExistingSession = true;
   };
 }
