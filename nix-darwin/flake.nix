@@ -34,6 +34,7 @@
         pkgs.mise
         pkgs.zoxide
         pkgs.zellij
+        pkgs.ripgrep
       ];
 
       # https://daiderd.com/nix-darwin/manual/index.html
@@ -90,6 +91,7 @@
           "mas"
           "difftastic"
           "ruby-build" # https://github.com/rbenv/ruby-build/wiki#macos
+          "mint"
         ];
         casks = [
           "tailscale"
