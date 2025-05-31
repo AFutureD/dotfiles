@@ -22,7 +22,7 @@
   programs.zsh = {
     enable = true;
 
-    initExtra = ''
+    initContent = ''
       autoload -U up-line-or-beginning-search
       autoload -U down-line-or-beginning-search
       zle -N up-line-or-beginning-search
@@ -38,8 +38,8 @@
 
     localVariables = {
       HOMEBREW_NO_AUTO_UPDATE = true;
-      ZELLIJ_AUTO_ATTACH = true;
-      ZELLIJ_AUTO_EXIT = true;
+      # ZELLIJ_AUTO_ATTACH = true;
+      # ZELLIJ_AUTO_EXIT = true;
       HOMEBREW_NO_AUTO_UPDAT = true;
       HOMEBREW_BUNDLE_NO_UPGRADE = true;
     };
@@ -50,6 +50,7 @@
       ll = "eza -abhl --time-style=relative --git --group-directories-first --octal-permissions --no-user";
       lz = "lazygit";
       ir = "iredis --rainbow --newbie --decode=utf8";
+      zja = "zellij attach -c"; 
     };
 
     zplug = {
@@ -72,7 +73,7 @@
 
   programs.zellij = {
     enable = true;
-    enableZshIntegration = true;
-    attachExistingSession = true;
+    # enableZshIntegration = true;
+    # attachExistingSession = true;
   };
 }

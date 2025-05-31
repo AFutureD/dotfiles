@@ -86,12 +86,17 @@
         onActivation.upgrade = true;
         onActivation.cleanup = "zap";
 
+        taps = [
+          "nikitabobko/tap"
+        ];
+        
         brews = [
           "gh"
           "mas"
           "difftastic"
           "ruby-build" # https://github.com/rbenv/ruby-build/wiki#macos
           "mint"
+          "ipython"
         ];
         casks = [
           "tailscale"
@@ -106,6 +111,7 @@
           "fork"
           "lookin"
           "zed"
+          "aerospace" # nikitabobko/tap
 
           "font-smiley-sans"
           "font-cascadia-code-pl"
