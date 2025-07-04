@@ -24,6 +24,7 @@
     		home = "/Users/huanan";
     	};
 
+      # https://search.nixos.org/packages
       environment.systemPackages = [
         pkgs.vim
         pkgs.zplug
@@ -35,9 +36,12 @@
         pkgs.zoxide
         pkgs.zellij
         pkgs.ripgrep
+        pkgs.rustup
+        pkgs.fd
       ];
 
       # https://daiderd.com/nix-darwin/manual/index.html
+      system.primaryUser = "huanan";
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 5;
 
@@ -89,7 +93,7 @@
         taps = [
           "nikitabobko/tap"
         ];
-        
+
         brews = [
           "gh"
           "mas"

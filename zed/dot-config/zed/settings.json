@@ -10,7 +10,7 @@
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "model": "gemini-2.5-pro-preview-05-06",
+      "model": "gemini-2.5-pro-preview-06-05",
       "provider": "google"
     },
     "version": "2"
@@ -50,7 +50,7 @@
         {
           "display_name": "Gemini 2.5 Pro",
           "max_tokens": 1000000,
-          "name": "gemini-2.5-pro-preview-05-06"
+          "name": "gemini-2.5-pro-preview-06-05"
         }
       ]
     }

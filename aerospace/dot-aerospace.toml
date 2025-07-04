@@ -172,6 +172,16 @@ if.app-id = 'com.apple.Safari'
 check-further-callbacks = false
 run = ['move-node-to-workspace W']
 
+[[on-window-detected]]
+if.app-id = 'com.culturedcode.ThingsMac'
+check-further-callbacks = false
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+check-further-callbacks = false
+run = ['move-node-to-workspace A']
+
 # fallback
 # move all unknown to first workspace
 [[on-window-detected]]
