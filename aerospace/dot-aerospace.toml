@@ -26,7 +26,7 @@ outer.right = 0
 
 [mode.main.binding]
 # alt-tab = 'workspace-back-and-forth'
-alt-tab = 'focus-back-and-forth'
+# alt-tab = 'focus-back-and-forth'
 
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
@@ -158,7 +158,7 @@ check-further-callbacks = false
 run = ['layout floating', 'move-node-to-workspace C']
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostt'
+if.app-id = 'com.mitchellh.ghostty'
 check-further-callbacks = false
 run = ['move-node-to-workspace T']
 

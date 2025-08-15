@@ -10,7 +10,6 @@ git:
     externalDiffCommand: 'difft --color=always --display="$([ $(tput cols) -lt 180 ] && echo inline || echo side-by-side-show-both)" --context=4'
   log:
     showWholeGraph: true
-
 keybinding:
   universal:
     filteringMenu: 'F'
@@ -27,9 +26,9 @@ customCommands:
     command: fork log -- {{.SelectedCommitFile.Name}} # tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
     context: commitFiles
     description: 'Show file history'
-    subprocess: true
-  - key: h 
+    output: terminal
+  - key: h
     command: fork log -- {{.SelectedFile.Name}} # tig -- {{.SelectedFile.Name}}
     context: files
     description: 'Show file history'
-    subprocess: true
+    output: terminal
