@@ -38,6 +38,7 @@
         pkgs.ripgrep
         pkgs.rustup
         pkgs.fd
+        pkgs.uv
       ];
 
       # https://daiderd.com/nix-darwin/manual/index.html
@@ -103,11 +104,13 @@
           "ipython"
         ];
         casks = [
-          "tailscale"
+          "input-source-pro"
+          "swiftformat-for-xcode"
+          "tailscale-app"
 		      "visual-studio-code"
 		      "ghostty"
-          "raycast"
-          "xcodes"
+          # "raycast"
+          "xcodes-app"
           "karabiner-elements"
           "openinterminal"
           "jordanbaird-ice"

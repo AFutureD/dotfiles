@@ -7,6 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "context7_api_key": "ctx7sk-4f515493-7e28-47fd-a718-75b43bd8a3ef"
+      }
+    }
+  },
+  "agent_servers": {},
   "vim_mode": false,
   "agent": {
     "always_allow_tool_actions": true,
@@ -73,7 +83,13 @@
   "ui_font_family": "Cascadia Code PL",
   "languages": {
     "Swift": {
-      "code_actions_on_format": {}
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "mint",
+          "arguments": ["run", "-s", "nicklockwood/SwiftFormat", "--quiet"]
+        }
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-theme = OneHalfDark
+# theme = OneHalfDark
 
 # window-theme = light
 window-padding-x = 6
@@ -16,3 +16,6 @@ macos-option-as-alt = true
 font-family = "Maple Mono NF CN"
 font-feature = +ss01, +cv01
 keybind = shift+enter=text:\n
+
+
+custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl

@@ -12,6 +12,14 @@
     pkgs.starship
   ];
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
+  home.sessionVariables = {
+    EDITOR = "code";
+  };
+
   xdg.enable = true;
 
   programs.mise = {

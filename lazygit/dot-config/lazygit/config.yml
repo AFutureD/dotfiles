@@ -5,9 +5,9 @@ gui:
   language: en
 git:
   branchLogCmd: git ls {{branchName}} --
-  paging:
-    colorArg: always
-    externalDiffCommand: 'difft --color=always --display="$([ $(tput cols) -lt 180 ] && echo inline || echo side-by-side-show-both)" --context=4'
+  pagers:
+    - colorArg: always
+      externalDiffCommand: 'difft --color=always --display="$([ $(tput cols) -lt 180 ] && echo inline || echo side-by-side-show-both)" --context=4'
   log:
     showWholeGraph: true
 keybinding:
