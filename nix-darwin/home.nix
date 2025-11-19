@@ -76,11 +76,13 @@
     enableZshIntegration = true;
   };
 
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+  };
 
   programs.zellij = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
     # attachExistingSession = true;
     # exitShellOnExit = true;
   };

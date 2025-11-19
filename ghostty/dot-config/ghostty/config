@@ -16,6 +16,8 @@ macos-option-as-alt = true
 font-family = "Maple Mono NF CN"
 font-feature = +ss01, +cv01
 keybind = shift+enter=text:\n
-
+keybind = alt+left=unbind
+keybind = alt+right=unbind
 
 custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
+command = /bin/zsh -l -c "zellij attach -c"
