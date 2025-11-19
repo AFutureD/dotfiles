@@ -114,7 +114,7 @@
           "karabiner-elements"
           "openinterminal"
           "jordanbaird-ice"
-          "alt-tab"
+          # "alt-tab"
           "fork"
           "lookin"
           "zed"
@@ -137,6 +137,24 @@
   in
   {
     darwinConfigurations."Huanans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+      modules = [
+        configuration
+        nix-homebrew.darwinModules.nix-homebrew {
+          nix-homebrew = {
+            enable = true;
+            user = "huanan";
+            autoMigrate = true;
+          };
+        }
+        home-manager.darwinModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users."huanan" = import ./home.nix;
+        }
+      ];
+    };
+    darwinConfigurations."Huanans-Mac-Studio" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew {
