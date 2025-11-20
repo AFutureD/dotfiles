@@ -21,13 +21,24 @@
       };
     };
 
+    homeManagerConf = {
+      imports = [ home-manager.darwinModules.home-manager ];
+
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users."${user}" = import ./home.nix;
+    };
+
+    homebrewConf = {
+      imports = [ nix-homebrew.darwinModules.nix-homebrew ];
+
+      nix-homebrew.enable = true;
+      nix-homebrew.user = user;
+      nix-homebrew.autoMigrate = true;
+    };
+
     configuration = { pkgs, ... }:
     {
-      imports = [
-        ./preferences.nix
-      ];
-
-      homebrew = import ./homebrew.nix;
 
       nix.channel.enable = false;
       nix.settings.experimental-features = "nix-command flakes";
@@ -39,9 +50,11 @@
       system.primaryUser = user;
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 5;
+      system.defaults = import ./preferences.nix;
 
       programs.zsh.enable = true;
 
+      homebrew = import ./homebrew.nix;
       # https://search.nixos.org/packages
       environment.systemPackages = [
         pkgs.vim
@@ -58,24 +71,6 @@
         pkgs.fd
         pkgs.uv
       ];
-    };
-
-    homeManagerConf = {
-      imports = [ home-manager.darwinModules.home-manager ];
-
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.users."${user}" = import ./home.nix;
-    };
-
-    homebrewConf = {
-      imports = [ nix-homebrew.darwinModules.nix-homebrew ];
-
-      nix-homebrew = {
-        enable = true;
-        inherit user;
-        autoMigrate = true;
-      };
     };
   in
   {
