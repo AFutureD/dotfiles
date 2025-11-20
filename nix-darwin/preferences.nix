@@ -1,15 +1,14 @@
-{ ... }:
 {
-  system.defaults.dock.show-recents = false;
+  dock.show-recents = false;
 
-  system.defaults.NSGlobalDomain = {
+  NSGlobalDomain = {
     InitialKeyRepeat = 25;
     KeyRepeat = 2;
   };
 
   # ~/Library/Preferences
   # https://github.com/yannbertrand/macos-defaults
-  system.defaults.CustomUserPreferences = {
+  CustomUserPreferences = {
     "com.apple.Safari" = {
       SearchProviderShortName = "Google";
       IncludeDevelopMenu = true;
