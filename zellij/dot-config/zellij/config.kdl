@@ -145,8 +145,6 @@ keybinds clear-defaults=true {
         bind "Ctrl q" { Quit; }
         bind "Alt t" { NewTab; SwitchToMode "normal"; }
         bind "Alt w" { CloseFocus; SwitchToMode "normal"; }
-        bind "Alt right" { GoToNextTab; SwitchToMode "normal"; }
-        bind "Alt left" { GoToPreviousTab; SwitchToMode "normal"; }
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }

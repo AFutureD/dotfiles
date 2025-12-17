@@ -28,7 +28,7 @@
     "karabiner-elements"
     "openinterminal"
     "jordanbaird-ice"
-    "alt-tab"
+    # "alt-tab"
     "fork"
     "lookin"
     "zed"

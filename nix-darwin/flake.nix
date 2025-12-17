@@ -13,7 +13,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
     user = "huanan";
-    
+
     usersConf = {
       users.users."${user}" = {
         name = user;
