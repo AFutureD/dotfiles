@@ -44,13 +44,6 @@
       export TERM=xterm-256color
     '';
 
-    localVariables = {
-      HOMEBREW_NO_ENV_HINTS = true;
-      HOMEBREW_NO_AUTO_UPDATE = true;
-      HOMEBREW_NO_AUTO_UPDAT = true;
-      HOMEBREW_BUNDLE_NO_UPGRADE = true;
-    };
-
     shellAliases = {
       ls = "eza -bhl --time-style=relative --git --group-directories-first --octal-permissions --no-user";
       lst = "ls -T -L 2";

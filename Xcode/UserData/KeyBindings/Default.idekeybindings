@@ -12,6 +12,68 @@
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
+				<string>IDESourceEditorExtension:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension,IDESourceEditorExtensionCommand:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension.FormatFileCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>^$I</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>SwiftFormat</string>
+				<key>Title</key>
+				<string>Format File</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>IDESourceEditorExtension:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension,IDESourceEditorExtensionCommand:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension.FormatSelectionCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>SwiftFormat</string>
+				<key>Title</key>
+				<string>Format Selection</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>IDESourceEditorExtension:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension,IDESourceEditorExtensionCommand:com.charcoaldesign.SwiftFormat-for-Xcode.SourceEditorExtension.LintFileCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>SwiftFormat</string>
+				<key>Title</key>
+				<string>Lint File</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
 				<string>IDESourceEditorExtension:com.github.CopilotForXcode.EditorExtension,IDESourceEditorExtensionCommand:com.github.CopilotForXcode.EditorExtensionCopilot.AcceptSuggestionCommand</string>
 				<key>Group</key>
 				<string>Editor Menu for Source Code</string>
@@ -248,7 +310,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Back</string>
+				<string>Show Previous Location in History</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -270,7 +332,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Back (option)</string>
+				<string>Show Previous Location in History (option)</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -292,7 +354,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Back (shift+option)</string>
+				<string>Show Previous Location in History (shift+option)</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -314,7 +376,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Forward</string>
+				<string>Show Next Location in History</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -336,7 +398,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Forward (option)</string>
+				<string>Show Next Location in History (option)</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -358,7 +420,7 @@
 				<key>Navigation</key>
 				<string>YES</string>
 				<key>Title</key>
-				<string>Go Forward (shift+option)</string>
+				<string>Show Next Location in History (shift+option)</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -428,30 +490,6 @@
 			</dict>
 			<dict>
 				<key>Action</key>
-				<string>newFolder:</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>CommandGroupID</key>
-				<string>IDENewGrouping</string>
-				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.NewFolder</string>
-				<key>Group</key>
-				<string>File Menu</string>
-				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Main</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>Keyboard Shortcut</key>
-				<string>~@n</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Parent Title</key>
-				<string>New</string>
-				<key>Title</key>
-				<string>Folder</string>
-			</dict>
-			<dict>
-				<key>Action</key>
 				<string>newWorkspace:</string>
 				<key>Alternate</key>
 				<string>NO</string>
@@ -515,26 +553,6 @@
 				<string>Scheme</string>
 				<key>Title</key>
 				<string>Select Next Scheme</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>runPageLayout:</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>CommandGroupID</key>
-				<string>Xcode.IDEKit.CmdDefinition.PageSetup</string>
-				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.PageSetup</string>
-				<key>Group</key>
-				<string>File Menu</string>
-				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Main</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>Page Setup…</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -713,6 +731,204 @@
 				<string>Code Folding</string>
 				<key>Title</key>
 				<string>Fold</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatFile:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>Group</key>
+				<string>Editor Menu for Asset Catalog Comparison</string>
+				<key>GroupID</key>
+				<string>Xcode.DeltaComparisonEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format File</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatFile:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>Group</key>
+				<string>Editor Menu for Playground</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPlaygroundEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format File</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatFile:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatFile</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format File</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatSelection:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>Group</key>
+				<string>Editor Menu for Asset Catalog Comparison</string>
+				<key>GroupID</key>
+				<string>Xcode.DeltaComparisonEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format Selection</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatSelection:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>Group</key>
+				<string>Editor Menu for Playground</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPlaygroundEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format Selection</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>formatSelection:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.FormatSelection</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Format Selection</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>reformatToWidth:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>Group</key>
+				<string>Editor Menu for Asset Catalog Comparison</string>
+				<key>GroupID</key>
+				<string>Xcode.DeltaComparisonEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Reformat To Width</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>reformatToWidth:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>Group</key>
+				<string>Editor Menu for Playground</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPlaygroundEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Reformat To Width</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>reformatToWidth:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ReformatToWidth</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Structure</string>
+				<key>Title</key>
+				<string>Reformat To Width</string>
 			</dict>
 			<dict>
 				<key>Action</key>

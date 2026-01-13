@@ -131,12 +131,7 @@ shift-down = ['volume set 0', 'mode main']
 
 alt-d = ['workspace D', 'layout h_tiles', 'mode main']
 
-
-[[on-window-detected]]
-if.app-id = 'com.apple.QuickTimePlayerX'
-check-further-callbacks = true
-run = ['layout floating']
-
+# ---------- Developer ----------
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode'
 check-further-callbacks = false
@@ -147,6 +142,7 @@ if.app-id = 'com.apple.iphonesimulator'
 check-further-callbacks = false
 run = ['layout floating', 'move-node-to-workspace D']
 
+# ---------- Chat ----------
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
 check-further-callbacks = false
@@ -157,33 +153,55 @@ if.app-id = 'ru.keepcoder.Telegram'
 check-further-callbacks = false
 run = ['layout floating', 'move-node-to-workspace C']
 
+# ---------- Terminal ----------
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 check-further-callbacks = false
 run = ['move-node-to-workspace T']
 
+# ---------- Git ----------
 [[on-window-detected]]
 if.app-id = 'com.DanPristupov.Fork'
 check-further-callbacks = false
 run = ['layout floating', 'move-node-to-workspace G']
 
+# ---------- Browser ----------
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
 check-further-callbacks = false
-run = ['move-node-to-workspace W']
+run = ['move-node-to-workspace B']
 
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+check-further-callbacks = false
+run = ['move-node-to-workspace B']
+
+# ---------- TODO ----------
 [[on-window-detected]]
 if.app-id = 'com.culturedcode.ThingsMac'
 check-further-callbacks = false
 run = ['move-node-to-workspace 2']
 
+# ---------- AI ----------
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'
 check-further-callbacks = false
 run = ['move-node-to-workspace A']
 
-# fallback
-# move all unknown to first workspace
+# ---------- Music ----------
+[[on-window-detected]]
+if.app-id = 'com.tencent.QQMusicMac'
+check-further-callbacks = false
+run = ['move-node-to-workspace M']
+
+# ---------- Floating ----------
+[[on-window-detected]]
+if.app-id = 'com.apple.QuickTimePlayerX'
+check-further-callbacks = true
+run = ['layout floating']
+
+# ---------- fallback ----------
+# move all unknown to first workspace and make it float
 [[on-window-detected]]
 check-further-callbacks = false
-run = ['move-node-to-workspace 1']
+run = ['layout floating', 'move-node-to-workspace 1']

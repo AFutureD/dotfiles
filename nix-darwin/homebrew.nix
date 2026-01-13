@@ -6,6 +6,7 @@
 
   taps = [
     "nikitabobko/tap"
+    "mediosz/tap"
   ];
 
   brews = [
@@ -23,16 +24,15 @@
     "tailscale-app"
     "visual-studio-code"
     "ghostty"
-    # "raycast"
     "xcodes-app"
     "karabiner-elements"
     "openinterminal"
     "jordanbaird-ice"
-    # "alt-tab"
     "fork"
     "lookin"
     "zed"
     "aerospace" # nikitabobko/tap
+    "swipeaerospace" # "mediosz/tap"
 
     "font-smiley-sans"
     "font-cascadia-code-pl"
@@ -43,7 +43,7 @@
   masApps = {
     "Yoink" = 457622435;
     "Bob" = 1630034110;
-    "Xnip" = 1221250572;
+    # "Xnip" = 1221250572;
     "PasteNow" = 1552536109;
     "Elpass" = 1484823238;
   };

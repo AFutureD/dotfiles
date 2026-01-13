@@ -14,6 +14,7 @@
   let
     user = "huanan";
 
+    # define user info
     usersConf = {
       users.users."${user}" = {
         name = user;
@@ -21,6 +22,7 @@
       };
     };
 
+    # define home manager
     homeManagerConf = {
       imports = [ home-manager.darwinModules.home-manager ];
 
@@ -29,6 +31,7 @@
       home-manager.users."${user}" = import ./home.nix;
     };
 
+    # define homebrew
     homebrewConf = {
       imports = [ nix-homebrew.darwinModules.nix-homebrew ];
 
@@ -37,24 +40,37 @@
       nix-homebrew.autoMigrate = true;
     };
 
+    # start configuration
     configuration = { pkgs, ... }:
     {
-
+      
+      # nix configuration
       nix.channel.enable = false;
       nix.settings.experimental-features = "nix-command flakes";
 
       nixpkgs.config.allowUnfree = true;
       nixpkgs.hostPlatform = "aarch64-darwin";
-
+      
+      # nix-darwin
       # https://daiderd.com/nix-darwin/manual/index.html
       system.primaryUser = user;
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 5;
       system.defaults = import ./preferences.nix;
 
+      # zsh
       programs.zsh.enable = true;
 
+      # environment
+      environment.variables = {
+          EDITOR = "code";
+          HOMEBREW_NO_ENV_HINTS = "1";
+      };
+
+      # homebrew
       homebrew = import ./homebrew.nix;
+      
+      # pkgs
       # https://search.nixos.org/packages
       environment.systemPackages = [
         pkgs.vim
@@ -71,9 +87,11 @@
         pkgs.fd
         pkgs.uv
       ];
+
     };
   in
   {
+    # 
     darwinConfigurations."Huanans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [
@@ -83,6 +101,8 @@
         homeManagerConf
       ];
     };
+    
+    # 
     darwinConfigurations."Huanans-Mac-Studio" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [

@@ -20,6 +20,8 @@
 	file-history = "!f() { git ls --date=short -- $1 | fzf --ansi --preview 'git show --ext-diff --color=always {2} -- '$1'' --preview-window='up:70%' ; }; f "
 	fh = file-history
 	wtf = "!f() { git worktree list | awk -v tag=\"[$1]\" '$NF==tag { print $1; exit }'; }; f"
+	wts = "!f() { wt_dir=$(git wtf \"$1\"); [ -n \"$wt_dir\" ] && git -C \"$wt_dir\" merge \"$(git rev-parse --abbrev-ref HEAD)\" && git -C \"$wt_dir\" push; }; f"
+
 
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
