@@ -6,7 +6,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to command+control+shift.",
+                                "description": "Change caps_lock to option+control+shift.",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
@@ -14,7 +14,7 @@
                                 "to": [
                                     {
                                         "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control"]
+                                        "modifiers": ["left_option", "left_control"]
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "caps_lock" }],
@@ -24,6 +24,17 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 75,
+                        "vendor_id": 65534
+                    },
+                    "ignore": false
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": {
