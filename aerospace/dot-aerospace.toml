@@ -131,6 +131,14 @@ shift-down = ['volume set 0', 'mode main']
 
 alt-d = ['workspace D', 'layout h_tiles', 'mode main']
 
+# on-window-detected
+
+# ---------- Finder ----------
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+check-further-callbacks = false
+run = ['move-node-to-workspace 2']
+
 # ---------- Developer ----------
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode'
@@ -163,7 +171,7 @@ run = ['move-node-to-workspace T']
 [[on-window-detected]]
 if.app-id = 'com.DanPristupov.Fork'
 check-further-callbacks = false
-run = ['layout floating', 'move-node-to-workspace G']
+run = ['move-node-to-workspace G']
 
 # ---------- Browser ----------
 [[on-window-detected]]
@@ -180,7 +188,13 @@ run = ['move-node-to-workspace B']
 [[on-window-detected]]
 if.app-id = 'com.culturedcode.ThingsMac'
 check-further-callbacks = false
-run = ['move-node-to-workspace 2']
+run = ['move-node-to-workspace N']
+
+# ---------- Notes ----------
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+check-further-callbacks = false
+run = ['move-node-to-workspace N']
 
 # ---------- AI ----------
 [[on-window-detected]]
