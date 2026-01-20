@@ -37,6 +37,8 @@
       zle -N down-line-or-beginning-search
       bindkey "^[[A" up-line-or-beginning-search
       bindkey "^[[B" down-line-or-beginning-search
+      bindkey "^[[1;3D" backward-word # option + <-
+      bindkey "^[[1;3C" forward-word  # option + ->
 
       zstyle ':completion:*:descriptions' format '[%d]'
       zstyle ':fzf-tab:*' continuous-trigger '/'
