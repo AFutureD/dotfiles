@@ -26,15 +26,15 @@ outer.right = 0
 
 [mode.main.binding]
 # alt-tab = 'workspace-back-and-forth'
-# alt-tab = 'focus-back-and-forth'
+alt-shift-ctrl-tab = 'focus-back-and-forth'
 
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-shift-semicolon = 'mode service'
 
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal'
-
+alt-comma = 'layout accordion horizontal'       # stack
+alt-period = 'layout tiles horizontal vertical' # tiles
+alt-slash = 'layout floating tiling'            # float
 
 alt-h = 'focus left --boundaries-action wrap-around-the-workspace'
 alt-j = 'focus down'
@@ -218,4 +218,4 @@ run = ['layout floating']
 # move all unknown to first workspace and make it float
 [[on-window-detected]]
 check-further-callbacks = false
-run = ['layout floating', 'move-node-to-workspace 1']
+run = ['layout floating']

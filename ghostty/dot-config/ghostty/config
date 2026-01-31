@@ -21,4 +21,4 @@ keybind = alt+left=unbind
 keybind = alt+right=unbind
 
 custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
-command = /bin/zsh -l -c "zellij attach -c"
+# command = /bin/zsh -l -c "zellij attach -c"
