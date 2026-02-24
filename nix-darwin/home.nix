@@ -29,6 +29,13 @@
 
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
+
+    completionInit = ''
+      fpath=(~/.zsh/completions $fpath)
+
+      autoload -U compinit && compinit
+    '';
 
     initContent = ''
       autoload -U up-line-or-beginning-search
