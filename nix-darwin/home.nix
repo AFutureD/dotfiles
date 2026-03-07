@@ -30,6 +30,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    dotDir = "${config.xdg.configHome}/zsh";
 
     completionInit = ''
       fpath=(~/.zsh/completions $fpath)
