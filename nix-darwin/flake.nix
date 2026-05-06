@@ -43,14 +43,14 @@
     # start configuration
     configuration = { pkgs, ... }:
     {
-      
+
       # nix configuration
       nix.channel.enable = false;
       nix.settings.experimental-features = "nix-command flakes";
 
       nixpkgs.config.allowUnfree = true;
       nixpkgs.hostPlatform = "aarch64-darwin";
-      
+
       # nix-darwin
       # https://daiderd.com/nix-darwin/manual/index.html
       system.primaryUser = user;
@@ -60,6 +60,8 @@
 
       # zsh
       programs.zsh.enable = true;
+      programs.zsh.enableCompletion = false; # would setup by user
+
 
       # environment
       environment.variables = {
@@ -69,7 +71,7 @@
 
       # homebrew
       homebrew = import ./homebrew.nix;
-      
+
       # pkgs
       # https://search.nixos.org/packages
       environment.systemPackages = [
@@ -91,7 +93,7 @@
     };
   in
   {
-    # 
+    #
     darwinConfigurations."Huanans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [
@@ -101,8 +103,8 @@
         homeManagerConf
       ];
     };
-    
-    # 
+
+    #
     darwinConfigurations."Huanans-Mac-Studio" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [
