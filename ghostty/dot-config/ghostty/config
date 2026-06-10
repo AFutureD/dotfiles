@@ -15,7 +15,7 @@ cursor-color = #3478F6
 macos-option-as-alt = true
 
 font-family = "Maple Mono NF CN"
-font-feature = +ss01, +cv01
+font-feature = -ss01, -ss03, +ss05, +ss09, +cv01, -cv02, +cv61, +cv66
 keybind = shift+enter=text:\n
 keybind = alt+left=unbind
 keybind = alt+right=unbind

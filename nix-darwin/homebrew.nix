@@ -27,12 +27,12 @@
     "xcodes-app"
     "karabiner-elements"
     "openinterminal"
-    "jordanbaird-ice"
+    # "jordanbaird-ice"
     "fork"
     "lookin"
     "zed"
     "aerospace" # nikitabobko/tap
-    "swipeaerospace" # "mediosz/tap"
+    # "swipeaerospace" # "mediosz/tap"
 
     "font-smiley-sans"
     "font-cascadia-code-pl"
@@ -41,10 +41,10 @@
   ];
 
   masApps = {
-    "Yoink" = 457622435;
-    "Bob" = 1630034110;
+    # "Yoink" = 457622435;
+    # "Bob" = 1630034110;
     # "Xnip" = 1221250572;
-    "PasteNow" = 1552536109;
-    "Elpass" = 1484823238;
+    # "PasteNow" = 1552536109;
+    # "Elpass" = 1484823238;
   };
 }
